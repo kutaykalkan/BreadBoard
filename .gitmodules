@@ -1,0 +1,6 @@
+[submodule "validator-service"]
+	path = validator-service
+	url = https://github.com/kutaykalkan/validator-service.git
+[submodule "web"]
+	path = web
+	url = https://github.com/kutaykalkan/web.git
