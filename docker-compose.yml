@@ -2,17 +2,15 @@ version: '3.8'
 services:
     frontend:
         container_name: validatorserviceclient
-        build:
-            context: ./web/client
-            dockerfile: Dockerfile
+        build: ./web/client
+        depends_on:
+            - backend
         image: validatorserviceclient
         ports:
             - "3000:3000"
     backend:
         container_name: validatorservice
-        build:
-            context: ./validator-service
-            dockerfile: Dockerfile
+        build: ./validator-service
         image: validatorservice
         ports:
             - "8000:8000"
